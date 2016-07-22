@@ -24,33 +24,14 @@ shinyServer(function(input, output){
                         dataInput<-reactive({
                                 predict0(input$entry)
                         })
-                        
+
                         output$text<-renderText({
                                 dataInput()
                         })
-                        
+
                         output$sent<-renderText({
                                 input$entry
                         })
 })
         
-                # output$oWordPredictions <- renderText({
-                # input$submitButton
-                #         
-                # results <- isolate(paste(
-                #         unlist(lapply(predict0(input = input$sentenceInputVar, 
-                #                       function(x) paste0("[", x, "]"))))))})})
-                # 
-                                      
-# output$distPlot <- renderPlot({
-#     
-#     # generate bins based on input$bins from ui.R
-#     x    <- faithful[, 2] 
-#     bins <- seq(min(x), max(x), length.out = input$bins + 1)
-#     
-#     # draw the histogram with the specified number of bins
-#     hist(x, breaks = bins, col = 'darkgray', border = 'white')
-#     
-#   })
-#   
-# })
+
